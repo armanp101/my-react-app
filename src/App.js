@@ -10,7 +10,14 @@ function Square({value, onSquareClick}) {
 
 export default function Game(){
   return (
-    <Board />
+    <div className="game">
+      <div className="game-board">
+        <Board />
+      </div>
+      <div className="game-info">
+        <ol>{}</ol>
+      </div>
+    </div>
   );
 }
 
