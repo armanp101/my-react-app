@@ -28,11 +28,12 @@ function handlePlay(nextSquares) {
 }
 
 function Board({ xIsNext, squares, onPlay }) {
-  function handleClick(i) {
-    if (calculateWinner(squares) || squares[i]) {
-      return;
-    }
-    const nextSquares = squares.slice();
+  function handleClick(i) {}
+
+  function handlePlay(nextSquares) {
+    setHistory([...history, nextSquares]);
+    setXIsNext(!xIsNext);
+
     if (xIsNext) {
       nextSquares[i] = 'X';
     } else {
