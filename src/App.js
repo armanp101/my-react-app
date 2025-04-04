@@ -24,6 +24,9 @@ export default function Game(){
   );
 }
 
+function handlePlay(nextSquares) {
+}
+
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
