@@ -63,6 +63,19 @@ export default function Game() {
     setXIsNext(!xIsNext);
   }
 
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+      </div>
+      <div className="game-info">
+        <ol>{/*TODO*/}</ol>
+      </div>
+    </div>
+  );
+}
+
+
 function calculateWinner(squares) {
   const lines = [
     [0, 1, 2],
